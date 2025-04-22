@@ -1,0 +1,35 @@
+git commit -m "Final cleanup and comments"
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int temp1, temp2, temp3;
+
+    // Get 3 temperature readings
+    cout << "Enter the first temperature reading: ";
+    cin >> temp1;
+    cout << "Enter the second temperature reading: ";
+    cin >> temp2;
+
+    int diff = temp2 - temp1;
+
+    // Check temperature increase
+    if (diff > 50) {
+        cout << "Reduce fryer heat before taking the third reading." << endl;
+    } else if (diff < 10) {
+        cout << "Increase the Fryer heat before taking the third reading." << endl;
+    }
+
+    cout << "Enter the third temperature reading: ";
+    cin >> temp3;
+
+    // Check final temperature range
+    if (temp3 >= 150 && temp3 <= 190) {
+        cout << "You may start frying the Magwinyas." << endl;
+    } else {
+        cout << "Oil is not ready for frying!" << endl;
+    }
+
+    return 0;
+}
